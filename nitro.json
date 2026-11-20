@@ -1,0 +1,23 @@
+{
+  "cxxNamespace": ["nitroadhan"],
+  "ios": {
+    "iosModuleName": "NitroAdhan"
+  },
+  "android": {
+    "androidNamespace": ["nitroadhan"],
+    "androidCxxLibName": "nitroadhan"
+  },
+  "autolinking": {
+    "NitroAdhan": {
+      "ios": {
+        "language": "swift",
+        "implementationClassName": "NitroAdhan"
+      },
+      "android": {
+        "language": "kotlin",
+        "implementationClassName": "NitroAdhan"
+      }
+    }
+  },
+  "ignorePaths": ["node_modules"]
+}
