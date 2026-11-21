@@ -1,0 +1,14 @@
+{
+  "extends": "../tsconfig",
+  "compilerOptions": {
+    // react-native-nitro-geolocation ships raw .tsx sources (no .d.ts), so
+    // skipLibCheck doesn't cover it and its unused params would fail the build.
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "paths": {
+      "react-native-nitro-adhan": ["../src/index"]
+    }
+  },
+  "include": ["src", "index.js"],
+  "exclude": []
+}

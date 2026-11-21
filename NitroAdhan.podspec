@@ -22,6 +22,13 @@ Pod::Spec.new do |s|
   s.dependency 'React-jsi'
   s.dependency 'React-callinvoker'
 
+  # adhan-swift is distributed via Swift Package Manager only (>= 1.5.0)
+  spm_dependency(s,
+    url: 'https://github.com/batoulapps/adhan-swift.git',
+    requirement: { kind: 'upToNextMajorVersion', minimumVersion: '1.5.0' },
+    products: ['Adhan']
+  )
+
   load 'nitrogen/generated/ios/NitroAdhan+autolinking.rb'
   add_nitrogen_files(s)
 

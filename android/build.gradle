@@ -87,9 +87,16 @@ android {
   buildFeatures {
     prefab true
   }
+
+  // adhan2 depends on kotlinx-datetime (java.time), which needs desugaring below API 26
+  compileOptions {
+    coreLibraryDesugaringEnabled true
+  }
 }
 
 dependencies {
   implementation "com.facebook.react:react-android"
   implementation project(":react-native-nitro-modules")
+  implementation "com.batoulapps.adhan:adhan2:0.0.6"
+  coreLibraryDesugaring "com.android.tools:desugar_jdk_libs:2.1.5"
 }
